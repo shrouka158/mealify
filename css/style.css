@@ -1,0 +1,783 @@
+/* =======================Start global styles======================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* =======================End global styles========================== */
+
+/* =======================Start navbar styles============================= */
+
+.nav-bar {
+  padding: 20px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  margin-bottom: 30px;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* padding: 20px; */
+}
+
+.nav .logo {
+  width: 30%;
+  /* padding: 20px; */
+}
+.nav .logo h2 {
+  color: #212529;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.logo h2 {
+  position: relative;
+}
+
+.logo h2::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  right: -2;
+}
+
+.nav .links {
+  width: 30%;
+}
+.links ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+}
+.links ul li {
+  margin-left: 40px;
+  padding-bottom: 5px;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.home-link {
+  border-bottom: red solid 3px;
+}
+
+.nav-links a {
+  position: relative;
+  padding-bottom: 8px;
+}
+.nav-links a::after {
+  content: "";
+  width: 0%;
+  height: 2.5px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.icon1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.icon1 i {
+  font-size: 30px;
+}
+
+.nav .icon1 {
+  width: 30%;
+}
+.icon1 i {
+  font-size: 30px;
+}
+
+/*============================End navbar styles============================ */
+
+/* ============================Start home styles============================== */
+
+.home-header {
+  padding: 40px 0;
+  height: 100vh;
+  background-color: #eeeeee;
+  margin-top: 50px;
+}
+
+.home-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-info h2 {
+  color: #37373f;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+}
+.home-info p {
+  color: #4f4f5a;
+  margin: 20px 0;
+  font-weight: 400;
+}
+
+.home-info {
+  width: 45%;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.buttons button {
+  width: 20%;
+  margin-right: 30px;
+  padding: 10px;
+  color: #fff;
+  background-color: red;
+  font-size: 15px;
+  border: solid red 2px;
+  border-radius: 0 15px 15px 15px;
+}
+
+.youtube-button {
+  padding: 10px;
+}
+.youtube-icon {
+  color: black;
+  font-weight: 600;
+}
+
+.youtube-icon i {
+  margin-right: 20px;
+  position: relative;
+  z-index: 99;
+}
+.youtube-icon i::after {
+  content: "";
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: -10px;
+  right: -14px;
+
+  background-color: white;
+  /* border: solid 10px brown;  */
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.youtube-icon:hover {
+  color: red;
+}
+
+.home-img {
+  width: 40%;
+}
+.home-img img {
+  width: 100%;
+  box-shadow: 3px 5px 10px 5px gray;
+  border-radius: 50%;
+
+  animation-play-state: paused;
+}
+
+.home-img img:hover {
+  animation-play-state: running;
+  animation: shake 1s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* ============================End home styles========================= */
+
+/* =============================Start chefs styles======================  */
+
+.chefs {
+  padding: 50px;
+}
+.chefs p {
+  text-align: center;
+  color: #7f7f90;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.chefs h3 {
+  text-align: center;
+  color: #212529;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+}
+h3 span {
+  color: #ce1212;
+}
+
+.sec2 {
+  /* background-color: aqua; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 40px 0;
+  background-color: white;
+}
+.item {
+  width: 30%;
+
+  border-radius: 20px;
+  background-color: white;
+}
+.item img {
+  width: 100%;
+  position: relative;
+}
+
+.inner {
+  /* margin: 20px; */
+  background-color: white;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.3);
+}
+.inner:hover .social-icons {
+  transform: translate(50%);
+}
+.inner:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cap h4 {
+  text-align: center;
+  color: #212529;
+  font-size: 18.72px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+}
+.para1 {
+  color: #7f7f90;
+  font-family: "Open Sans" system-ui -apple-system "Segoe UI" Roboto "Helvetica Neue"
+    Arial "Noto Sans" "Liberation Sans" sans-serif "Apple Color Emoji" "Segoe UI Emoji"
+    "Segoe UI Symbol" "Noto Color Emoji";
+
+  font-size: 15px;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.para2 {
+  color: #7f7f90;
+  font-family: "Open Sans" system-ui -apple-system "Segoe UI" Roboto "Helvetica Neue"
+    Arial "Noto Sans" "Liberation Sans" sans-serif "Apple Color Emoji" "Segoe UI Emoji"
+    "Segoe UI Symbol" "Noto Color Emoji";
+
+  font-weight: 400;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  width: 40px;
+  height: 150px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  opacity: 0.5;
+  /* padding: 20px; */
+  border-radius: 8px;
+  margin: 10px;
+  transform: translateX(120%);
+  transition: all 0.5s 0.5s;
+}
+
+/* ==========================End chefs styles=============================== */
+
+/* ==========================Start gallary lines========================== */
+
+.gallery {
+  background-color: #eeeeee;
+  padding: 50px;
+}
+
+.header-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.gallery .section1 {
+  width: 32%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  gap: 30px 30px;
+}
+
+.gallery .section2 {
+  width: 32%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  gap: 30px 30px;
+}
+
+.gallery .section3 {
+  width: 32%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  gap: 1.25rem;
+}
+.section1 .item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s 0.5s;
+  border: #ffffff solid 8px;
+  box-shadow: 0px 0px 21px 0px #0003 inset;
+}
+.section2 .item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s 0.5s;
+  border: #ffffff solid 8px;
+  box-shadow: 0px 0px 21px 0px #0003 inset;
+}
+.section3 .item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border: #ffffff solid 8px;
+  box-shadow: 0px 0px 21px 0px #0003 inset;
+}
+
+.section1 .item img {
+  width: 100%;
+  height: 100%;
+}
+
+.section2 .item img {
+  width: 100%;
+  height: 100%;
+}
+.section3 .item img {
+  width: 100%;
+  height: 100%;
+}
+.sec3 {
+  padding: 30px;
+}
+
+.sec3 h2 {
+  color: #212529;
+  text-align: center;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+}
+h2 span {
+  color: #ce1212;
+}
+
+.sec3 p {
+  text-align: center;
+  color: #7f7f90;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translateY(100%);
+  transition: all 0.5s;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item:hover .layer {
+  transform: translateY(0%);
+}
+
+.layer h4 {
+  text-align: center;
+  color: #ffffff;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.layer p {
+  text-align: center;
+  color: #dddddd;
+  font-family: "Open Sans" system-ui -apple-system "Segoe UI" Roboto "Helvetica Neue"
+    Arial "Noto Sans" "Liberation Sans" sans-serif "Apple Color Emoji" "Segoe UI Emoji"
+    "Segoe UI Symbol" "Noto Color Emoji";
+
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.central-content {
+  width: 80%;
+}
+
+/* =======================End gallary section=============================== */
+
+/* ========================Start contact styles================================ */
+
+.contact {
+  padding: 50px;
+}
+
+.contact p {
+  text-align: center;
+  color: #7f7f90;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.contact h2 {
+  color: #212529;
+  text-align: center;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+h2 span {
+  color: #ce1212;
+}
+
+.contact-map iframe {
+  width: 100%;
+}
+
+.sec {
+  width: 48%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  background-color: #eeeeee;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.contact-icon {
+  background-color: #ce1212;
+  width: 50px;
+  height: 50px;
+  border: solid #ce1212;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.contact-icon i {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.sec-content h3 {
+  color: #7d7d7d;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.sec-content p {
+  color: #212529;
+  font-family: "Open Sans" system-ui -apple-system "Segoe UI" Roboto "Helvetica Neue"
+    Arial "Noto Sans" "Liberation Sans" sans-serif "Apple Color Emoji" "Segoe UI Emoji"
+    "Segoe UI Symbol" "Noto Color Emoji";
+
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*============================End contact styles================================  */
+
+/* ===========================Start form styles=========================== */
+
+.subject {
+  width: 96%;
+  height: 50px;
+  margin: 20px;
+  border: solid #f3f1f1 2px;
+}
+
+.data-entry {
+  padding: 50px;
+}
+
+.item1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.client-name {
+  width: 47%;
+  height: 50px;
+  margin-top: 20px;
+  border: solid #f3f1f1 2px;
+}
+.client-email {
+  width: 47%;
+  height: 50px;
+  margin-top: 20px;
+  border: solid #f3f1f1 2px;
+}
+
+textarea {
+  margin: 0 20px 20px 20px;
+  resize: none;
+  border: solid #f3f1f1 2px;
+}
+form .buttons button {
+  margin: auto;
+  border-radius: 15px 15px 15px 15px;
+  width: 15%;
+  margin-top: 20px;
+}
+
+form {
+  filter: drop-shadow(8px 8px 15px gray);
+  border: solid #ffffff 2px;
+  background-color: white;
+}
+
+/* =========================End form styles================================= */
+
+/* =========================Start footer styles================================== */
+
+.footer {
+  padding: 30px;
+  background-color: #0c0b0a;
+}
+.last-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.left-sec {
+  width: 25%;
+}
+.mealify-logo {
+  display: flex;
+  flex-wrap: row wrap;
+}
+
+.mealify-logo img {
+  width: 50px;
+}
+.mealify-logo h2 {
+  margin: 10px;
+  color: #ffffff;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  font-size: 30px;
+  font-weight: 700;
+}
+.last-section p {
+  margin: 10px;
+  color: #ffffff;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.text h3 {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 18.72px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.text {
+  border-bottom: solid 2px #585858;
+  padding: 10px;
+}
+
+.footer-icon i {
+  color: #ffffff;
+  margin: 20px 30px;
+  font-size: 20px;
+}
+
+.middle-sec {
+  width: 43%;
+  /* background-color: rebeccapurple; */
+}
+
+.middle-sec h3 {
+  font-family: Inter, sans-serif;
+  font-size: 18.72px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.register input {
+  width: 75%;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.register button {
+  width: 20%;
+  height: 40px;
+  background-color: red;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Arial;
+}
+.middle-sec ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+.middle-sec ul li {
+  width: 45%;
+  margin: 5px;
+}
+.middle-sec ul li a {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  color: #ffffff;
+}
+.middle-sec ul li:hover {
+  transform: translateX(10%);
+}
+
+.right-sec {
+  width: 30%;
+}
+.right-sec h3 {
+  font-family: Inter, sans-serif;
+  font-size: 18.72px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+}
+.info i {
+  color: red;
+  margin-top: 5px;
+}
+.info p {
+  margin: 10px;
+}
+
+/* ========================End footer styles========================== */
